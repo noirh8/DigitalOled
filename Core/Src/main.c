@@ -101,9 +101,6 @@ bool set_Year = false;
 // variable for stop watch
 bool stopWatch = false;
 
-#define LOGO_HEIGHT   16
-#define LOGO_WIDTH    16
-
 int sec1=0;
 int min1=0;
 
@@ -267,6 +264,7 @@ int main(void)
     
     if(Menu_Stat == false && btn_Down == 0) {
     	game = true;
+    	HAL_Delay(50);
     }
     while(game) {
     	Game_Display();
@@ -1156,7 +1154,7 @@ void Set_Alarm_Cursor(uint8_t slct)
 {
   if (slct == 1)
   {
-    ssd1306_DrawBitmap(41, 34, Select_Top, 5, 4, White);
+    ssd1306_DrawBitmap(40, 34, Select_Top, 5, 4, White);
   }
   else if (slct == 2)
   {
